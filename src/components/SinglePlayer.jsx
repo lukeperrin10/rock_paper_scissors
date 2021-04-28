@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import {
   Segment,
   Grid,
@@ -8,13 +8,12 @@ import {
   Container,
 } from "semantic-ui-react";
 
-export default class SinglePlayer extends Component {
+ const SinglePlayer = () => {
+   
 
-  
+}
 
 
-
-  render() {
     return (
       <Container>
         <Segment placeholder size="huge" vertical data-cy="options-menu">
@@ -48,5 +47,6 @@ export default class SinglePlayer extends Component {
         </Segment>
       </Container>
     );
-  }
-}
+  
+
+export default SinglePlayer
