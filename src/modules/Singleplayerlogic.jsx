@@ -1,6 +1,4 @@
-import React from "react";
-
-const ComputerChoice = () => {
+const computerChoice = () => {
   let computerResult;
   let computerDecision = Math.floor(Math.random() * 3);
 
@@ -8,30 +6,34 @@ const ComputerChoice = () => {
     computerResult = "rock";
   } else if (computerDecision === 1) {
     computerResult = "paper";
-  } else {
-    computerDecision === 2;
+  } else if (computerDecision === 2) {
     computerResult = "scissors";
   }
+
   return computerResult;
 };
 
-const gameWinner = () => {
-  let computer = ComputerChoice()
-  let winner 
-
+const gameWinner = (computerChoice, userChoice) => {
+  let computer = computerChoice;
+  let player = userChoice;
+  let winner;
   if (computer === "paper" && player === "scissors") {
-    winner = "player"
+    winner = "player";
   } else if (computer === "rock" && player === "scissors") {
-    winner = "computer"
+    winner = "computer";
   } else if (computer === "scissors" && player === "paper") {
-    winner = "computer"
+    winner = "computer";
   } else if (computer === "scissors" && player === "rock") {
-    winner = "player"
+    winner = "player";
   } else if (computer === "rock" && player === "paper") {
-    winner = "player"
+    winner = "player";
   } else if (computer === "paper" && player === "rock") {
-    winner = "computer"
+    winner = "computer";
+  } else if (computer === player) {
+    winner = "It's a tie";
   }
-}
+  
+  return [winner];
+};
 
-export { ComputerChoice, gameWinner}
+export default { gameWinner, computerChoice };
