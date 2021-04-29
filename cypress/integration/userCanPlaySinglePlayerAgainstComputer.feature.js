@@ -1,7 +1,6 @@
 describe("User can play against the computer in singleplayer", () => {
   beforeEach(() => {
     cy.visit("/");
-    cy.get('[data-cy="singleplayer"]').click();
   });
 
   it("is expected to show three choices", () => {
