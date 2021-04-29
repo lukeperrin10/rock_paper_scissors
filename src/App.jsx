@@ -11,7 +11,7 @@ import singlePlayerLogic from "./modules/Singleplayerlogic";
 
 const Game = () => {
   const [userChoice, setUserChoice] = useState("");
-  const [computerChoice, setComputerChoice] = useState(0);
+  const [computerChoice, setComputerChoice] = useState("");
   const [champion, setResult] = useState("");
 
   const playGame = (userChoice) => {
@@ -61,7 +61,6 @@ const Game = () => {
           </Grid.Row>
         </Grid>
       </Segment>
-      <Container>
         <Segment placeholder size="big">
           <Grid columns={3} stackable textAlign="center">
             <Grid.Row>
@@ -77,8 +76,9 @@ const Game = () => {
             </Grid.Row>
           </Grid>
         </Segment>
-      </Container>
+      
     </Container>
+
   );
 };
 
