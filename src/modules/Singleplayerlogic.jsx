@@ -1,11 +1,12 @@
+
 const computerChoice = () => {
   let computerResult;
   let computerDecision = Math.floor(Math.random() * 3);
 
   if (computerDecision === 0) {
-    computerResult = "rock";
-  } else if (computerDecision === 1) {
     computerResult = "paper";
+  } else if (computerDecision === 1) {
+    computerResult = "rock";
   } else if (computerDecision === 2) {
     computerResult = "scissors";
   }
@@ -32,8 +33,13 @@ const gameWinner = (computerChoice, userChoice) => {
   } else if (computer === player) {
     winner = "It's a tie";
   }
-  
+
   return [winner];
 };
 
-export default { gameWinner, computerChoice };
+const theGame = {
+  gameWinner,
+  computerChoice
+}
+
+export default theGame
